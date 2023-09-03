@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Economy Prediction</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=
+                    Merienda:wght@300;900&display=swap" rel="stylesheet">
+</head>
+<body>
+                    <!-- header -->
+    <h1, class="heading"> Predicting Fuel Economy of Light-Duty Vehicles</h1>
+    
+            <!-- brief introduction about the app -->
+    <p class="description"> This application utilizes a Machine Learning algorithm to 
+        predict the fuel economy of light-duty vehicles. The algorithm has been trained 
+        on comprehensive fuel economy datasets, enabling it to achieve an impressive predictive 
+        accuracy of 95%. The code and step-by-step instructions for this project are stored in my GitHub 
+        repository. </p>
+<!-- creating form to take input from the user -->
+
+    <div class="entries">
+        <form action="{{url_for('predict')}}" method="POST" >
+
+            <p> <label for="Model Year"> Model Year</label> <br>
+                <input type="text" name ="Model Year" placeholder="Enter Model Year" required></p>
+
+            <p> <label for="Division"> Vehicle Brand </label> <br>
+                <select name="Division">
+                    <option value = 'Alfa Romeo'>Alfa Romeo</option>
+                    <option value = 'Aston Martin'>Aston Martin</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Bentley">Bentley</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Bugatti">Bugatti</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Dodge">Dodge</option>
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Jaguar">Jaguar</option>
+                    <option value="Lamborghini">Lamborghini</option>
+                    <option value="MAZDA">MAZDA</option>
+                    <option value="McLaren">McLaren</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="Mini">Mini</option>
+                    <option value="NISSAN">NISSAN</option>
+                    <option value="Porsche">Porsche</option>
+                    <option value="FIAT">FIAT</option>
+                    <option value="SCION">SCION</option>
+                    <option value="Subaru">Subaru</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="INFINITI">INFINITI</option>
+                    <option value="LEXUS">LEXUS</option>
+                    <option value="MASERATI">MASERATI</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Acura">Acura</option>
+                    <option value="Buick">Buick</option>
+                    <option value="Cadillac">Cadillac</option>
+                    <option value="KIA">KIA</option>
+                    <option value="Mitsubishi">Mitsubishi</option>
+                    <option value="Rolls-Royce">Rolls-Royce</option>
+                    <option value="TOYOTA">TOYOTA</option>
+                    <option value="Volvo">Volvo</option>
+                    <option value="Chrysler">Chrysler</option>
+                    <option value="Lincoln">Lincoln</option>
+                    <option value="GMC">GMC</option>
+                    <option value="RAM">RAM</option>
+                    <option value="Jeep">Jeep</option>
+                    <option value="Land Rover">Land Rover</option>
+                    <option value="Roush">Roush</option>
+                    <option value="Mobility">Mobility</option>
+                    <option value="Pagani">Pagani</option>
+                    <option value="Lotus">Lotus</option>
+                    <option value="GENESIS">GENESIS</option>
+                    <option value="Koenigsegg">Koenigsegg</option>
+                    <option value="RUF">RUF</option>
+                    
+                </select>
+            </p>
+            
+            <p> <label for="Engine Displacement"> Engine Displacement</label> <br>
+                <input type="text" name ="Engine Displacement" placeholder="Enter Engine Displacement value" required ></p>
+
+            <p> <label for="Cylinder"> Cylinder</label> <br>
+                <input type="text" name ="Cylinder" placeholder="Enter Number of Cylinder" required></p>
+
+            <p> <label>Transmission</label><br>
+                    <input type="radio" name="Transmission" value="Automatic" id="auto" required>
+                    <label for="auto">Automatic</label>
+                    <input type="radio" name="Transmission" value="Manual" id="manual" required>
+                    <label for="manual">Manual</label>
+            </p>
+
+            <p> <label for="Air Aspiration Method"> Air Aspiration Method </label> <br>
+                <select name="Air Aspiration Method">
+                    <option value = 'Turbocharged'>Turbocharged</option>
+                    <option value = 'Naturally Aspirated'>Naturally Aspirated</option>
+                    <option value="Supercharged">Supercharged</option>
+                    <option value="Turbocharged+Supercharged">Turbocharged+Supercharged</option>
+                    <option value="Other">Other</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="Transmission Desc">Transmission Description</label><br>
+                <select name="Transmission Description" >
+                    <option value="Automated Manual">Automated Manual</option>
+                    <option value="Manual">Manual</option>
+                    <option value="Automated Manual-Selectable">Automated Manual-Selectable</option>
+                    <option value="Semi-Automatic">Semi-Automatic</option>
+                    <option value="Selectable Continuously Variable">Selectable Continuously Variable</option>
+                    <option value="Automatic">Automatic</option>
+                    <option value="Continuously Variable">Continuously Variable</option>
+                </select>
+            </p>
+            
+            <p>
+                <label for="gears">Gears</label><br>
+                <input type="text", name="Gears", placeholder="Enter Number of Gears" required>
+            </p>
+
+            <p>
+                <label for="Drive Description">Drive Description</label><br>
+                <select name="Drive Description" id="">
+                    <option value="2-Wheel Drive, Rear">2-Wheel Drive, Rear</option>
+                    <option value="All Wheel Drive">All Wheel Drive</option>
+                    <option value="2-Wheel Drive, Front">2-Wheel Drive, Front</option>
+                    <option value="4-Wheel Drive">4-Wheel Drive</option>
+                    <option value="Part-time 4-Wheel Drive">Part-time 4-Wheel Drive</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="Fuel_Usage_Desc">Fuel Type</label><br>
+                <select name="Fuel_Usage_Desc" id="">
+                    <option value="Regular Gasoline">Regular Gasoline</option>
+                    <option value="Premium Gasoline">Premium Gasoline</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Gasoline Mid Grade">Gasoline Mid Grade</option>                    
+                </select>
+            </p>
+
+            <p>
+                
+                <label for="Carline Class Description">Vehicle Category</label><br>
+                <select name="Carline_Class_Desc" id="">
+                    <option value="Two Seaters">Two Seaters</option>
+                    <option value="Minicompact Cars">Minicompact Cars</option>
+                    <option value="Subcompact Cars">Subcompact Cars</option>
+                    <option value="Compact Cars">Compact Cars</option>
+                    <option value="Midsize Cars">Midsize Cars</option>
+                    <option value="Large Cars">Large Cars</option>
+                    <option value="Small Station Wagons">Small Station Wagons</option>
+                    <option value="Midsize Station Wagons">Midsize Station Wagons</option>
+                    <option value="Small SUV">Small SUV</option>
+                    <option value="Small Pick-up Trucks">Small Pick-up Trucks</option>
+                    <option value="Standard Pick-up Trucks">Standard Pick-up Trucks</option>
+                    <option value="Vans Cargo Types">Vans Cargo Types</option>
+                    <option value="Vans Passenger Type">Vans Passenger Type</option>
+                    <option value="Special Purpose Vehicle">Special Purpose Vehicle</option>
+                    <option value="Special Purpose Vehicle cab chassis">Special Purpose Vehicle cab chassis</option>
+                    <option value="Special Purpose Minivan">Special Purpose Minivan</option>
+                    <option value="Standard SUV">Standard SUV</option>
+                </select>
+            </p>
+        <!-- Creating submit and reset button -->
+            <p>
+                <input type="submit">
+                <input type="reset">
+            </p><br>
+        </form>
+        </div>
+</body>
+</html>
