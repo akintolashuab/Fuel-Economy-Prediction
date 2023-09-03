@@ -34,13 +34,16 @@ This project is organized into five major parts:
 
 i.    Data Folder: This directory contains the data required for building our machine learning model.
 
-ii.   XGBR_Feul_Economy.pkl: This is pickle file containing our trained machine learning model.
+ii.   XGBR_model.pkl: This is pickle file containing our trained machine learning model.
 
-iii.  The main.py: This file houses the Flask APIs responsible for handling vehicle data input through a Graphical User Interface (GUI) or API calls. It then computes the predicted Fuel economy of the vehicle based on our model and returns the result. This is the core of the application, where predictions are made and served to users.
+iii.  main.py: This file houses the Flask APIs responsible for handling vehicle data input through a Graphical User Interface (GUI) or API calls. It then computes the predicted Fuel economy of the vehicle based on our model and returns the result. This is the core of the application, where predictions are made and served to users.
 
 iv.   static Folder: The static folder contains Cascading Style Sheets (CSS) files used for styling the application's user interface. It is responsible for adjusting content size, spacing, color, and adding decorative features like animations that enhance the visual appeal and usability of the user interface.
 
 v.    templates Folder: Inside the templates folder, you will find HTML templates that enable users to input life expectancy features and display the predicted Fuel economy of the vehicles.
+
+vi.   Fuel Economy Prediction.ipynb: This Jupyter Notebook, named "Fuel Economy Prediction.ipynb," serves as the environment for training and developing the machine learning model for fuel economy prediction. It contains the code and documentation for the model training process, allowing for transparency and reproducibility.
+vii.  requirements.txt: This file is a text document that lists all the packages or dependencies necessary for running the application on an EC2 instance. It ensures that the required libraries and packages are readily available and installed on the EC2 instance, making deployment and execution smoother.
 
 ## Detailed Steps
 a. Data Collection
