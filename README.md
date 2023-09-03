@@ -86,4 +86,4 @@ Implement security measures to protect the API and sensitive data.
 ## Conclusion
 This project offers hands-on experience in the entire machine learning pipeline, from data collection to deployment on AWS EC2.
 It enhances skills in data preprocessing, feature engineering, model selection, and web application development with Flask.
-The deployment on AWS EC2 demonstrates how to make machine learning models accessible for practical use.
+The deployment on AWS EC2 demonstrates how to make machine learning models accessible for practical use. "The application is currently running on the following port: http://ec2-54-162-152-25.compute-1.amazonaws.com:8888/
