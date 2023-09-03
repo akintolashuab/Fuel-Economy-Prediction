@@ -25,22 +25,22 @@ Deployment on AWS EC2 with Flask is necessary to make the model accessible over 
 1. Pandas for data manipulation 
 2. Numpy for mathematical calculation and analysis 
 3. Seaborn and Matplotlib for visualization and insights
-4. Python 3.9 Environment 
+4. Python 3.11 Environment 
 5. Jupyter and Microsoft Excel as tools  
 6. Sklearn for Machine Learning and preprocessing
 
 ## Project Structure
 This project is organized into five major parts:
 
-Data Folder: This directory contains the data required for building our machine learning model.
+i.    Data Folder: This directory contains the data required for building our machine learning model.
 
-XGBR_Feul_Economy.pkl: This is pickle file containing our trained machine learning model.
+ii.   XGBR_Feul_Economy.pkl: This is pickle file containing our trained machine learning model.
 
-The main.py: This file houses the Flask APIs responsible for handling vehicle data input through a Graphical User Interface (GUI) or API calls. It then computes the predicted Fuel economy of the vehicle based on our model and returns the result. This is the core of the application, where predictions are made and served to users.
+iii.  The main.py: This file houses the Flask APIs responsible for handling vehicle data input through a Graphical User Interface (GUI) or API calls. It then computes the predicted Fuel economy of the vehicle based on our model and returns the result. This is the core of the application, where predictions are made and served to users.
 
-static Folder: The static folder contains Cascading Style Sheets (CSS) files used for styling the application's user interface. It is responsible for adjusting content size, spacing, color, and adding decorative features like animations that enhance the visual appeal and usability of the user interface.
+iv.   static Folder: The static folder contains Cascading Style Sheets (CSS) files used for styling the application's user interface. It is responsible for adjusting content size, spacing, color, and adding decorative features like animations that enhance the visual appeal and usability of the user interface.
 
-templates Folder: Inside the templates folder, you will find HTML templates that enable users to input life expectancy features and display the predicted Fuel economy of the vehicles.
+v.    templates Folder: Inside the templates folder, you will find HTML templates that enable users to input life expectancy features and display the predicted Fuel economy of the vehicles.
 
 ## Detailed Steps
 a. Data Collection
