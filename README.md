@@ -43,6 +43,7 @@ iv.   static Folder: The static folder contains Cascading Style Sheets (CSS) fil
 v.    templates Folder: Inside the templates folder, you will find HTML templates that enable users to input life expectancy features and display the predicted Fuel economy of the vehicles.
 
 vi.   Fuel Economy Prediction.ipynb: This Jupyter Notebook, named "Fuel Economy Prediction.ipynb," serves as the environment for training and developing the machine learning model for fuel economy prediction. It contains the code and documentation for the model training process, allowing for transparency and reproducibility.
+
 vii.  requirements.txt: This file is a text document that lists all the packages or dependencies necessary for running the application on an EC2 instance. It ensures that the required libraries and packages are readily available and installed on the EC2 instance, making deployment and execution smoother.
 
 ## Detailed Steps
